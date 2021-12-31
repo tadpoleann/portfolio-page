@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+  <body>
+    <button
+      class="mobile-nav-toggle"
+      aria-controls="nav-menu"
+      aria-expanded="false"
+    >
+      <span class="sr-only">Menu</span>
+    </button>
+    <nav id="navbar" data-visible="false" tabindex="0">
+      <ul class="nav-menu" role="menubar" aria-haspopup="true">
+        <li class="nav-item" role="menuitem" aria-label="Portfolio">
+          <a class="nav-link" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item" role="menuitem" aria-label="About">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item" role="menuitem" aria-label="Work">
+          <a class="nav-link" href="#work">Work</a>
+        </li>
+        <li class="nav-item" role="menuitem" aria-label="Contact">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
