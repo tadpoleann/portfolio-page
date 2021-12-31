@@ -411,7 +411,7 @@ section#work.projects-section {
 /* Background Image of Contact Form */
 .contact-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.65)),
-    url("https://unsplash.it/4998/3456?image=652");
+    url("https://unsplash.it/4998/3456?image=");
 }
 /* Properties of Background Images */
 .modal-bg-properties {
@@ -527,6 +527,7 @@ p.about-page_introduction {
   margin-bottom: 0.5rem;
   color: var(--blue-green);
 }
+/* End About Section */
 
 /* == Contact Form == */
 .form-container {
@@ -631,6 +632,33 @@ form button {
   }
 }
 /* == End Contact Form == */
+
+/* == Contact Section == */
+.contact-section {
+  background-color: rgba(var(--blue-green-rgb-values), 0.2);
+  color: var(--seashell);
+  text-align: center;
+  padding: 1rem;
+}
+.contact-title {
+  color: var(--macaroni-cheese);
+  margin: 0;
+}
+.page-contact_info {
+  padding-top: 1rem;
+}
+.page-contact_info a {
+  color: var(--pale-pink);
+  text-decoration: none;
+}
+/* End Contact Section */
+
+/* == Footer == */
+.footer-section {
+  text-align: center;
+  color: var(--macaroni-cheese);
+}
+/* End Footer */
 
 /* == Media Queries == */
 @media screen and (min-width: 524px) {
