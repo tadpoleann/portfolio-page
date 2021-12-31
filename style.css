@@ -268,3 +268,114 @@ h1.greeting::after {
   }
 }
 /* end hello animation */
+
+/* == Projects Section ==*/
+section#work.projects-section {
+  background-color: var(--raisin-black);
+}
+.proj-title {
+  color: var(--blue-green);
+  margin-top: 4rem;
+}
+.projects-section {
+  padding: 0.5rem;
+}
+.proj-grid {
+  --padding: 1rem;
+  --gap: 3rem;
+  --num-cols: 1;
+  --row-height: 250px;
+  padding: 2rem var(--padding) 1rem;
+  display: grid;
+  grid-template-columns: repeat(var(--num-cols), 1fr);
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap);
+}
+/* media queries for the grid layout */
+@media screen and (min-width: 488px) {
+  .proj-grid {
+    --padding: 5rem;
+    --row-height: 300px;
+  }
+}
+@media screen and (min-width: 620px) {
+  .proj-grid {
+    --num-cols: 2;
+    --padding: 2rem;
+  }
+}
+@media screen and (min-width: 920px) {
+  .proj-grid {
+    --gap: 4rem;
+    --padding: 4rem;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .proj-grid {
+    --padding: 6rem;
+    --row-height: 350px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .proj-grid {
+    --num-cols: 3;
+    --padding: 7rem;
+  }
+}
+.image-grid-col-2 {
+  grid-column: span 2;
+}
+.image-grid-row-2 {
+  grid-row: span 2;
+}
+/*hover title effect on project grid*/
+.proj-item {
+  position: relative;
+  cursor: pointer;
+}
+.proj-item:active {
+  transform: scale(0.97);
+}
+.proj-item img {
+  object-fit: cover;
+  border-radius: 20px;
+}
+.image__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(var(--blue-green-rgb-values), 0.75);
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.25s;
+  border-radius: 20px;
+}
+.image__overlay {
+  opacity: 0;
+}
+.image__overlay:hover {
+  opacity: 1;
+}
+/* === project modals === */
+.modal {
+  top: 0;
+  bottom: 0;
+  left: 2%;
+  overflow-y: auto;
+  border-radius: 8px;
+  width: 95%;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  background-color: var(--raisin-black);
+  transition: all 0.4s;
+}
+.modal.active {
+  visibility: visible;
+  opacity: 1;
+}
