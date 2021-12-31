@@ -16,6 +16,7 @@
   --seashell-rgb-values: 255, 245, 238;
 
   --typewriterSpeed: 2.5s;
+  --typewriterSteps: 16;
 }
 *,
 *::before,
@@ -209,3 +210,61 @@ a.nav-link:hover:after {
   }
 }
 /********* end navbar *********/
+
+/* == Hello Animation == */
+div.top-container {
+  margin-top: 1rem;
+  background-color: var(--vermillion);
+}
+.top-container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+h1.hideHello {
+  opacity: 0;
+  visibility: hidden;
+}
+h1.greeting {
+  opacity: 1;
+  visibility: visible;
+  color: var(--seashell);
+  position: relative;
+  letter-spacing: 0.1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+h1.greeting::before,
+h1.greeting::after {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  position: absolute;
+}
+h1.greeting::before {
+  background-color: var(--vermillion);
+  animation: typewriter var(--typewriterSpeed) steps(var(--typewriterSteps))
+    1.5s forwards;
+}
+h1.greeting::after {
+  width: 0.4rem;
+  background: var(--seashell);
+  animation: typewriter var(--typewriterSpeed) steps(var(--typewriterSteps))
+      1.5s forwards,
+    blinkTypewriter 650ms steps(8) infinite;
+}
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+@keyframes blinkTypewriter {
+  to {
+    background: transparent;
+  }
+}
+/* end hello animation */
