@@ -6,7 +6,6 @@ window.onload = () => {
 };
 
 // Modal Open and Close
-// open modal, close modal
 const projects = document.querySelectorAll("[data-target]");
 const close_btns = document.querySelectorAll(".close-btn");
 const overlay = document.querySelector("#overlay");

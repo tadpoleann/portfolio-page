@@ -40,7 +40,7 @@
 
     <!-- Greeting Container -->
     <div class="top-container">
-      <h1 class="hideHello">Hi, I'm {{Name}}</h1>
+      <h1 class="hideHello">Hi, I'm Name</h1>
     </div>
     <!-- End greeting container -->
 
@@ -51,7 +51,7 @@
         <!-- === Modal 1 === -->
         <div class="proj-item" data-target="#modal1">
           <img
-            src="https://unsplash.it/4998/3456?image=501"
+            src="https://unsplash.it/4998/3456?image=678"
             alt="Modal 1 Project Picture"
           />
           <div class="image__overlay">
@@ -71,7 +71,7 @@
             </div>
             <div class="modal-title">Modal 1 Title</div>
             <img
-              src="https://unsplash.it/4998/3456?image=501"
+              src="https://unsplash.it/4998/3456?image=678"
               alt="Modal 1 Project Screenshot"
             />
             <div class="modal-body">
@@ -534,10 +534,48 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, dolore
         facere necessitatibus nisi iusto non fugiat consequuntur! Labore eius
         nulla maiores eos, asperiores veniam quisquam, magnam ratione
-        perspiciatis, voluptatum non.
+        perspiciatis, voluptatum non. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Eos, repellat minima possimus deserunt odit delectus
+        maiores cum dolore cumque! Sapiente delectus sed illo facere magnam quas
+        minima at inventore ipsam! Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Eaque laudantium impedit ad facilis porro a magnam
+        harum. Eaque placeat obcaecati beatae unde quisquam rem, vitae quia est
+        porro praesentium maiores.
       </p>
     </section>
     <!-- End About Section -->
+
+    <!-- Contact form -->
+    <h1>Get in touch</h1>
+    <div class="form-container">
+      <form class="contact-bg modal-bg-properties" id="myForm">
+        <label class="inputTitle" for="from_name">From</label>
+        <input
+          type="text"
+          id="from_name"
+          class="input"
+          placeholder="Your Name"
+          required
+        />
+        <label class="inputTitle" for="email_from">Email</label>
+        <input
+          type="email"
+          id="email_from"
+          class="input"
+          placeholder="Email"
+          required
+        />
+        <label class="inputTitle" for="message">Message</label>
+        <textarea
+          class="textArea"
+          id="message"
+          rows="8"
+          placeholder="Write your message here :)"
+        ></textarea>
+        <button class="contact-button" type="button">Send</button>
+      </form>
+    </div>
+    <!-- End Contact Form -->
 
     <!-- General JS -->
     <script src="./script.js"></script>

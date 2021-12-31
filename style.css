@@ -16,7 +16,7 @@
   --seashell-rgb-values: 255, 245, 238;
 
   --typewriterSpeed: 2.5s;
-  --typewriterSteps: 16;
+  --typewriterSteps: 12;
 }
 *,
 *::before,
@@ -298,7 +298,7 @@ section#work.projects-section {
     --row-height: 300px;
   }
 }
-@media screen and (min-width: 620px) {
+@media screen and (min-width: 768px) {
   .proj-grid {
     --num-cols: 2;
     --padding: 2rem;
@@ -382,7 +382,7 @@ section#work.projects-section {
 /* Background Images of Modals */
 .modal1-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-    url("https://unsplash.it/4998/3456?image=501");
+    url("https://unsplash.it/4998/3456?image=678");
 }
 .modal2-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
@@ -408,6 +408,12 @@ section#work.projects-section {
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
     url("https://unsplash.it/4998/3456?image=654");
 }
+/* Background Image of Contact Form */
+.contact-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.65)),
+    url("https://unsplash.it/4998/3456?image=652");
+}
+/* Properties of Background Images */
 .modal-bg-properties {
   background-repeat: no-repeat;
   background-size: cover;
@@ -522,8 +528,119 @@ p.about-page_introduction {
   color: var(--blue-green);
 }
 
+/* == Contact Form == */
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.34rem;
+}
+.inputTitle {
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+  color: var(--seashell);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 2vw 4vw;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  border: 1px solid rgba(var(--vermillion-rgb-values), 0.5);
+  letter-spacing: 1px;
+}
+.input {
+  box-sizing: border-box;
+  border: 1px solid rgba(var(--vermillion-rgb-values), 0.5);
+  outline: none;
+  background-color: rgba(var(--seashell-rgb-values), 0.25);
+  color: whitesmoke;
+  border-radius: 4px;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.input:focus {
+  border: 1px solid var(--blue-green);
+}
+.textArea {
+  border: 1px solid rgba(var(--vermillion-rgb-values), 0.6);
+  background-color: rgba(var(--pale-pink-rgb-values), 0.25);
+  color: whitesmoke;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  transition: 0.5s;
+}
+.textArea:focus {
+  outline: none;
+  border-color: var(--macaroni-cheese);
+}
+::placeholder {
+  color: whitesmoke;
+  font-weight: 600;
+  opacity: 1;
+  font-size: 1rem;
+}
+form button {
+  border: none;
+  margin: 20px auto 0;
+  width: 150px;
+  border-radius: 30px;
+}
+.contact-button {
+  border: 1px solid rgba(var(--vermillion-rgb-values), 0.6);
+  box-shadow: 0px 25px 14px -7px #00000069;
+  background-color: rgba(var(--seashell-rgb-values), 0.3);
+  text-shadow: 1px 1px 1px var(--raisin-black);
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  color: whitesmoke;
+  font-size: 0.95rem;
+  font-weight: bold;
+  padding: 9px 7px;
+  transition: 0.4s;
+  border-radius: 4px;
+  letter-spacing: 1px;
+}
+.contact-button:hover,
+.contact-button:focus {
+  background-color: rgba(var(--seashell-rgb-values), 0.75);
+  color: var(--raisin-black);
+  text-shadow: 1px 1px 1px var(--seashell);
+  border-radius: 8px;
+}
+@supports (backdrop-filter: blur(0.5rem)) {
+  .input {
+    backdrop-filter: blur(0.6rem);
+  }
+  .textArea {
+    backdrop-filter: blur(0.6rem);
+  }
+  .contact-button {
+    backdrop-filter: blur(0.6rem);
+  }
+  .contact-button:hover,
+  .contact-button:focus {
+    backdrop-filter: blur(0.6rem);
+  }
+}
+/* == End Contact Form == */
+
 /* == Media Queries == */
-@media screen and (min-width: 680px) {
+@media screen and (min-width: 524px) {
+  .portfolio-section {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
   .videoWrapper {
     padding-bottom: 46.25%;
   }
@@ -551,9 +668,7 @@ p.about-page_introduction {
     padding: 0.5rem 0.5rem 2rem;
   }
   .portfolio-section {
-    margin: 0 auto;
-    padding: 1rem 2rem;
-    width: 70%;
+    width: 65%;
   }
 }
 @media screen and (min-width: 1024px) {
