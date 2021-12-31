@@ -291,7 +291,7 @@ section#work.projects-section {
   grid-auto-rows: var(--row-height);
   gap: var(--gap);
 }
-/* media queries for the grid layout */
+/* Media Queries for the Grid Layout */
 @media screen and (min-width: 488px) {
   .proj-grid {
     --padding: 5rem;
@@ -328,7 +328,7 @@ section#work.projects-section {
 .image-grid-row-2 {
   grid-row: span 2;
 }
-/*hover title effect on project grid*/
+/*Hover title effect on project grid*/
 .proj-item {
   position: relative;
   cursor: pointer;
@@ -360,7 +360,7 @@ section#work.projects-section {
 .image__overlay:hover {
   opacity: 1;
 }
-/* === project modals === */
+/* === Project Modals === */
 .modal {
   top: 0;
   bottom: 0;
@@ -378,4 +378,187 @@ section#work.projects-section {
 .modal.active {
   visibility: visible;
   opacity: 1;
+}
+/* Background Images of Modals */
+.modal-bg-properties {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+/* Pop-up Modal Layout */
+.modal-header {
+  padding: 2rem;
+}
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.modal-content img {
+  max-width: 100%;
+  transition: 0.5s;
+}
+.modal-content img:hover {
+  transform: scale(1.2);
+}
+.videoWrapper {
+  position: relative;
+  display: block;
+  padding-bottom: 56.25%;
+  width: 100%;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.modal-title {
+  color: var(--pale-pink);
+  font-size: 2rem;
+  padding: 0.2rem 0.2rem 2.5rem;
+}
+.modal-body {
+  margin: 0;
+  color: var(--seashell);
+  font-size: 1rem;
+  padding: 2.5rem 1rem 0;
+  line-height: 125%;
+}
+.modal-body p {
+  margin: 0.2rem 0.2rem 1rem;
+}
+.modal-body h1 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.5rem;
+}
+.featureList li {
+  margin-bottom: 0.2rem;
+  list-style: none;
+  text-align: left;
+}
+.modal-body a.button {
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+.close-btn {
+  background-color: transparent;
+  color: var(--macaroni-cheese);
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.2rem;
+  transition: all 0.6s;
+}
+button.close-btn:hover {
+  transform: rotateY(180deg);
+  color: var(--vermillion);
+}
+/* == blue-green background when clicking modal ==*/
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(var(--blue-green-rgb-values), 0.5);
+}
+#overlay.active {
+  display: block;
+}
+
+/* == Media Queries == */
+@media screen and (min-width: 680px) {
+  .videoWrapper {
+    padding-bottom: 46.25%;
+  }
+  .modal {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: -50%;
+  }
+  .modal-header {
+    padding: 2rem;
+  }
+  .close-btn {
+    font-size: 3.5rem;
+  }
+  .modal-content img {
+    padding: 0 1rem;
+  }
+  .modal-body {
+    font-size: 1.1rem;
+    padding: 1rem 4rem 0.25rem;
+  }
+  .modal-title {
+    font-size: 2.5rem;
+    padding: 0.5rem 0.5rem 2rem;
+  }
+  .portfolio-section {
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .modal {
+    width: 75%;
+  }
+  .modal-body {
+    padding: 2rem 8rem 0.5rem;
+  }
+  .modal-body p {
+    margin: 0.2rem 0.2rem 1.5rem;
+  }
+  .modal-content img {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .portfolio-section {
+    width: 55%;
+  }
+  .button {
+    font-size: 1rem;
+    padding: 10px 8px;
+  }
+  .contact-button {
+    font-size: 1rem;
+    padding: 10px 8px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .videoWrapper {
+    padding-bottom: 36.25%;
+  }
+  .modal-content img {
+    padding: 0 2rem;
+  }
+  p.about-page_introduction {
+    padding: 1rem 20rem;
+  }
+  .portfolio-section {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1450px) {
+  .videoWrapper {
+    padding-bottom: 36.25%;
+  }
+  .portfolio-section {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 1620px) {
+  .videoWrapper {
+    padding-bottom: 34.25%;
+  }
+  .portfolio-section {
+    width: 40%;
+  }
 }
