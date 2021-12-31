@@ -1,0 +1,35 @@
+:root {
+  /* PORTFOLIO COLORS */
+  --raisin-black: rgb(46, 40, 42);
+  --blue-green: rgb(23, 190, 187);
+  --vermillion: rgb(205, 83, 52);
+  --macaroni-cheese: rgb(237, 184, 139);
+  --pale-pink: rgb(250, 216, 214);
+  --seashell: rgb(255, 245, 238);
+
+  --raisin-black-rgb-values: 46, 40, 42;
+  --blue-green-rgb-values: 23, 190, 187;
+  --vermillion-rgb-values: 205, 83, 52;
+  --macaroni-cheese-rgb-values: 237, 184, 139;
+  --pale-pink-rgb-values: 250, 216, 214;
+  --seashell-rgb-values: 255, 245, 238;
+
+  --typewriterSpeed: 2.5s;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--raisin-black);
+  font-family: "Philosopher", sans-serif;
+}
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
