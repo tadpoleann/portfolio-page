@@ -1,3 +1,3 @@
-No libraries so I can practice css and vanilla js
+No libraries/frameworks used
 
-all handcoded from scratch
+If you don't want to use any server-side technology for the contact form, you can deploy the website using netlify and use their contact form feature.

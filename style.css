@@ -284,7 +284,7 @@ section#work.projects-section {
   --padding: 1rem;
   --gap: 3rem;
   --num-cols: 1;
-  --row-height: 250px;
+  --row-height: 350px;
   padding: 2rem var(--padding) 1rem;
   display: grid;
   grid-template-columns: repeat(var(--num-cols), 1fr);
@@ -294,8 +294,13 @@ section#work.projects-section {
 /* Media Queries for the Grid Layout */
 @media screen and (min-width: 488px) {
   .proj-grid {
-    --padding: 5rem;
-    --row-height: 300px;
+    --padding: 2rem;
+    --row-height: 350px;
+  }
+}
+@media screen and (min-width: 588px) {
+  .proj-grid {
+    --padding: 4rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -404,14 +409,15 @@ section#work.projects-section {
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
     url("https://unsplash.it/4998/3456?image=564");
 }
+/* Background Image of "Portfolio" Section */
 .lastModal-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
     url("https://unsplash.it/4998/3456?image=654");
 }
 /* Background Image of Contact Form */
 .contact-bg {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.65)),
-    url("https://unsplash.it/4998/3456?image=");
+  background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
+    url("https://unsplash.it/4998/3456?image=791");
 }
 /* Properties of Background Images */
 .modal-bg-properties {
@@ -504,11 +510,13 @@ button.close-btn:hover {
 #overlay.active {
   display: block;
 }
+/* === End Projects Section === */
 
 /* == Portfolio Section == */
 .portfolio-section {
   padding: 1rem;
 }
+/* End Portfolio Section */
 
 /* == About section == */
 p.about-page_introduction {
